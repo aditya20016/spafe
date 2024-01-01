@@ -62,7 +62,6 @@ def mel_filter_banks_helper(
     """
     # init freqs
     high_freq = high_freq or fs / 2
-    print("high_freq", high_freq)
 
     # run checks
     if low_freq < 0:
@@ -298,6 +297,7 @@ def inverse_mel_filter_banks(
         - :py:func:`spafe.fbanks.linear_fbanks.linear_filter_banks`
         - :py:func:`spafe.fbanks.bark_fbanks.bark_filter_banks`
     """
+    high_freq = high_freq or fs / 2
     # inverse scaler value
     scales = {
         "ascendant": "descendant",
