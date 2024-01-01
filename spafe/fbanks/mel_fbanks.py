@@ -62,6 +62,7 @@ def mel_filter_banks_helper(
     """
     # init freqs
     high_freq = high_freq or fs / 2
+    print("high_freq", high_freq)
 
     # run checks
     if low_freq < 0:
